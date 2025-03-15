@@ -4,7 +4,7 @@
   "description": "React Boilerplate for Electron applications",
   "main": "main.js",
   "scripts": {
-    "electron": "electron .",
+    "dev": "electron .",
     "make:app": "electron-builder"
   },
   "build": {
@@ -27,9 +27,7 @@
   "author": "Mohammed Almalki",
   "license": "ISC",
   "devDependencies": {
-    "@tailwindcss/cli": "^4.0.9",
     "electron": "^34.3.0",
-    "electron-builder": "^25.1.8",
-    "tailwindcss": "^4.0.9"
+    "electron-builder": "^25.1.8"
   }
 }
