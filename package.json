@@ -1,0 +1,37 @@
+{
+  "name": "pure-boilerplate",
+  "version": "1.0.0",
+  "description": "Pure Boilerplate for Electron applications",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "electron .",
+    "build:css": "npx @tailwindcss/cli -i ./public/assets/css/tailwind/tailwind-input.css -o ./public/assets/css/tailwind/tailwind-output.css --watch",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "Application-id",
+    "productName": "Product-name",
+    "win": {
+      "icon": "build/logo.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "build/logo.ico",
+      "installerHeaderIcon": "build/logo.ico",
+      "installerSidebar": "build/image.bmp",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "allowToChangeInstallationDirectory": true,
+      "license": "build/license.txt"
+    }
+  },
+  "author": "Mohammed Almalki",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.9",
+    "electron": "^34.3.0",
+    "electron-builder": "^25.1.8",
+    "tailwindcss": "^4.0.9"
+  }
+}
