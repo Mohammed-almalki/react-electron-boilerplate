@@ -1,13 +1,11 @@
 {
-  "name": "pure-boilerplate",
+  "name": "react-boilerplate",
   "version": "1.0.0",
-  "description": "Pure Boilerplate for Electron applications",
+  "description": "React Boilerplate for Electron applications",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "electron .",
-    "build:css": "npx @tailwindcss/cli -i ./public/assets/css/tailwind/tailwind-input.css -o ./public/assets/css/tailwind/tailwind-output.css --watch",
-    "dist": "electron-builder"
+    "electron": "electron .",
+    "make:app": "electron-builder"
   },
   "build": {
     "appId": "Application-id",
