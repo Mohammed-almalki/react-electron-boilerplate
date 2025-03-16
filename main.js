@@ -18,6 +18,7 @@ function createWindow() {
         height: 600,
         webPreferences: {
             preload: rootDir('preload/shared.js'),
+            devTools: isDev,
         },
     });
 
@@ -26,7 +27,7 @@ function createWindow() {
         callback({
             responseHeaders: {
                 ...details.responseHeaders,
-                'Content-Security-Policy': ["default-src 'self'"]
+                'Content-Security-Policy': [isDev ? "" : "default-src 'self'"]
             }
         })
     });
@@ -36,6 +37,9 @@ function createWindow() {
         mainWindow.loadURL("http://localhost:5173");
         globalShortcut.register("F2", () => {
             mainWindow.webContents.openDevTools();
+        });
+        globalShortcut.register("Ctrl+R", () => {
+            mainWindow.webContents.reload();
         });
     } else {
         mainWindow.loadFile(rootDir("/dist/index.html"));
